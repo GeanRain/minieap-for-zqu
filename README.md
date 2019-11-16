@@ -1,5 +1,19 @@
 ## 前言
+
+感谢 @liangjies 对肇庆学院进行 [适配](https://github.com/liangjies/minieap-for)，
+
+这个版本修复了心跳功能（只在八区测试通过），心跳间隔推荐15s（八区）
+
+**注意：这个版本是阉割了计费功能**
+
+
+
+以下是原内容
+
+------
+
 针对肇庆学院锐捷认证修改的minieap
+
 #### 以下是使用示例，
 ```
 minieap -u 用户名 -p 密码 -n 网卡名 -b 0 --module rjv3 -e 20 -d 1 -c "dhclient" --version-str "RG-SU For Linux V1.30"

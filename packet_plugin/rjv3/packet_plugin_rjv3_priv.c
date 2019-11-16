@@ -463,16 +463,16 @@ RESULT rjv3_process_result_prop(ETH_EAP_FRAME* frame) {
     }
     if (frame->header->eapol_hdr.type[0] == EAP_PACKET &&
             frame->header->eap_hdr.code[0] == EAP_SUCCESS) {
-        _msg = NULL;
-        _msg = find_rjv3_prop(_srv_msg, 0x3c);
-        if (_msg != NULL) {
-            int _content_len = _msg->header2.len - HEADER2_SIZE_NO_MAGIC(_msg);
+        // _msg = NULL;
+        // _msg = find_rjv3_prop(_srv_msg, 0x3c);
+        // if (_msg != NULL) {
+        //     int _content_len = _msg->header2.len - HEADER2_SIZE_NO_MAGIC(_msg);
 
-            if (_content_len != 0) {
-                PR_INFO("计费通知：\n");
-                pr_info_gbk((char*)_msg->content, _content_len);
-            }
-        }
+        //     if (_content_len != 0) {
+        //         PR_INFO("计费通知：\n");
+        //         pr_info_gbk((char*)_msg->content, _content_len);
+        //     }
+        // }
 
         _msg = NULL;
         _msg = (RJ_PROP*)lookup_data(_srv_msg, NULL, rjv3_is_echokey_prop);
